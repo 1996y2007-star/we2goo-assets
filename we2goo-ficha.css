@@ -74,7 +74,7 @@
 .w2g-fi-precio-row { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin-top: .25rem; }
 .w2g-fi-precio { font-family: var(--fd); font-size: 1.75rem; font-weight: 900; color: var(--naranja2); line-height: 1; }
 .w2g-fi-precio small { font-family: var(--fb); font-size: .68rem; color: var(--gris-t); font-weight: 400; display: block; margin-top: .15rem; }
-.w2g-fi-btn { display: inline-flex; align-items: center; gap: .4rem; background: linear-gradient(135deg, var(--azul), var(--azul-m)); color: var(--blanco) !important; padding: .65rem 1.1rem; border-radius: 50px; font-family: var(--fb); font-size: .82rem; font-weight: 700; transition: var(--tr); white-space: nowrap; }
+.w2g-fi-btn { display: inline-flex; align-items: center; gap: .4rem; background: linear-gradient(135deg, var(--azul), var(--azul-m)); color: var(--blanco) !important; padding: .65rem 1.1rem; border-radius: 50px; font-family: var(--fb); font-size: .82rem; font-weight: 700; transition: var(--tr); white-space: nowrap; min-height: 44px; }
 .w2g-fi-btn:hover { background: linear-gradient(135deg, var(--naranja), var(--naranja2)); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(242,145,27,.4); }
 
 /* ── FECHAS ── */
