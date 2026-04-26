@@ -44,7 +44,7 @@
 .w2g-fi-hero-precio { font-family: var(--fd); font-size: 2.75rem; font-weight: 900; color: #fff; line-height: 1; text-shadow: 0 2px 12px rgba(0,0,0,.4); }
 .w2g-fi-hero-precio em { font-style: normal; color: var(--naranja); }
 .w2g-fi-hero-precio span { font-family: var(--fb); font-size: .78rem; color: rgba(255,255,255,.6); font-weight: 400; margin-left: .25rem; }
-.w2g-fi-hero-cta { display: inline-flex; align-items: center; gap: .5rem; background: linear-gradient(135deg, var(--naranja), var(--naranja2)); color: #fff !important; font-family: var(--fb); font-weight: 700; font-size: 1rem; padding: 1rem 2rem; border-radius: 50px; width: fit-content; transition: var(--tr); box-shadow: 0 8px 24px rgba(242,84,27,.4); }
+.w2g-fi-hero-cta { display: inline-flex; align-items: center; gap: .5rem; background: linear-gradient(135deg, var(--naranja), var(--naranja2)); color: #fff !important; font-family: var(--fb); font-weight: 700; font-size: 1rem; padding: 1rem 2rem; border-radius: 50px; border: none !important; outline: none !important; width: fit-content; transition: var(--tr); box-shadow: 0 8px 24px rgba(242,84,27,.4); }
 .w2g-fi-hero-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(242,84,27,.55); }
 
 /* ── LAYOUT ── */
@@ -143,7 +143,7 @@
 .w2g-fi-kit-cta-body { flex: 1; min-width: 200px; }
 .w2g-fi-kit-cta-title { font-family: var(--fd); font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: .4rem; line-height: 1.3; }
 .w2g-fi-kit-cta-sub { font-family: var(--fb); font-size: .84rem; color: rgba(255,255,255,.8); line-height: 1.55; }
-.w2g-fi-kit-cta-btn { display: inline-flex; align-items: center; background: var(--naranja); color: #fff !important; font-family: var(--fb); font-weight: 700; font-size: .9rem; padding: .875rem 1.5rem; border-radius: 50px; white-space: nowrap; flex-shrink: 0; transition: var(--tr); }
+.w2g-fi-kit-cta-btn { display: inline-flex; align-items: center; background: var(--naranja); color: #fff !important; font-family: var(--fb); font-weight: 700; font-size: .9rem; padding: .875rem 1.5rem; border-radius: 50px; border: none !important; outline: none !important; white-space: nowrap; flex-shrink: 0; transition: var(--tr); }
 .w2g-fi-kit-cta-btn:hover { background: var(--naranja2); transform: translateY(-2px); }
 
 /* ── MÁS OFERTAS ── */
