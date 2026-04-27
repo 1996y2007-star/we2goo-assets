@@ -1204,3 +1204,22 @@
     .cta-final { padding: 36px 24px; }
     .precio-insight { gap: 16px; }
   }
+.w2g-of-filters-row-ciudad {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 8px;
+  padding: 4px 0 8px 0;
+  width: 100%;
+  margin-top: 10px;
+}
+.w2g-of-filters-row-ciudad::-webkit-scrollbar { display: none; }
+.w2g-of-tab--ciudad {
+  flex-shrink: 0;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
