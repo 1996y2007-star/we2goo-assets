@@ -359,17 +359,16 @@ input.w2g-calc-inp{padding-right:18px}
 .w2g-calc-bd{background:var(--blanco);border-radius:var(--r);padding:24px 24px;margin-bottom:14px;box-shadow:var(--sh);border:1px solid rgba(5,42,89,.04)}
 /* Especificidad 0,2,0 — gana sobre Astra .entry-content ul (0,1,1) que inyecta padding-left:20px */
 .w2g-calc-bd .w2g-calc-bd-list{list-style:none;padding:0;margin:0}
-/* FIX-DOM-NEST: el template JS tiene divs sin cerrar → .w2g-calc-bd-r
-   queda anidado dentro de .w2g-calc-bd-s, no como sibling de .w2g-calc-bd-l.
-   Solución: position:absolute saca el precio del flujo del anidamiento. */
+/* JS en wp_footer (§28 we2goo-functions.php) corrige el HTML del template
+   antes de que el browser lo pinte — divs cerrados correctamente. */
 .w2g-calc-bd-item{
   display:flex;align-items:center;
-  position:relative;
-  padding:14px 110px 14px 0;
+  justify-content:space-between;
+  padding:14px 0;
   border-bottom:1px solid var(--crema2);
 }
 .w2g-calc-bd-item:last-child{border-bottom:none}
-.w2g-calc-bd-l{display:flex;align-items:center;gap:12px}
+.w2g-calc-bd-l{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
 .w2g-calc-bd-ico{
   width:40px;height:40px;
   background:var(--crema);
@@ -380,11 +379,7 @@ input.w2g-calc-inp{padding-right:18px}
 }
 .w2g-calc-bd-n{font-size:14px;font-weight:600;color:var(--negro)}
 .w2g-calc-bd-s{font-size:11px;color:var(--gris-t);margin-top:2px;line-height:1.4}
-.w2g-calc-bd-r{
-  position:absolute;right:0;top:0;bottom:0;width:110px;
-  display:flex;flex-direction:column;justify-content:center;align-items:flex-end;
-  text-align:right;white-space:nowrap
-}
+.w2g-calc-bd-r{text-align:right;flex-shrink:0;white-space:nowrap}
 .w2g-calc-bd-eur{font-size:16px;font-weight:700;color:var(--azul)}
 .w2g-calc-bd-loc{font-size:11px;color:var(--gris-t);margin-top:2px}
 
