@@ -1,0 +1,217 @@
+/* we2goo-bento.css — Bento Featured Card en /ofertas/ (page 301)
+   Movido desde inline <style id="w2g-bento-css"> en nueva_oferta.py
+   Causa: wp_kses_post() stripeaba el <style> en cada POST via REST API (WP-KSES-01 pattern)
+   Cargado via w2g_enqueue_bento_css() — we2goo-functions.php §29 */
+
+.w2g-of-featured {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 32px rgba(5,42,89,.10);
+  margin: 0 0 28px 0;
+  overflow: hidden;
+}
+.w2g-bf-inner {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+}
+.w2g-bf-header {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: rgba(5,42,89,.03);
+  border-bottom: 1px solid #eef2f7;
+}
+.w2g-bf-header-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #052A59;
+}
+.w2g-bf-header-sub {
+  font-size: .78rem;
+  color: #5a6172;
+}
+
+/* ── Celda A: imagen principal (span 4) ── */
+.w2g-bf-img {
+  grid-column: span 4;
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #052A59;
+}
+.w2g-bf-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.w2g-bf-img-ov {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,42,89,.85) 0%, rgba(5,42,89,.15) 55%, transparent 100%);
+  z-index: 1;
+}
+.w2g-bf-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 3;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .35rem .8rem;
+  border-radius: 50px;
+}
+.w2g-bf-destino {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  z-index: 3;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  text-shadow: 0 2px 8px rgba(0,0,0,.35);
+  max-width: 90%;
+}
+
+/* ── Celda B: precio (span 1) ── */
+.w2g-bf-price {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background: linear-gradient(180deg, rgba(5,42,89,.03) 0%, rgba(242,145,27,.08) 100%);
+}
+.w2g-bf-price-num {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #052A59;
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+.w2g-bf-price-unit {
+  font-size: .72rem;
+  font-weight: 500;
+  color: #5a6172;
+  margin-top: .15rem;
+}
+.w2g-bf-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  background: linear-gradient(135deg, #F2911B, #F2541B);
+  color: #fff;
+  font-weight: 700;
+  font-size: .78rem;
+  padding: .55rem .9rem;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: .65rem;
+  transition: transform .2s;
+}
+.w2g-bf-cta:hover { transform: scale(1.03); }
+
+/* ── Celda C: urgency (span 1) ── */
+.w2g-bf-urgency {
+  grid-column: span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background: rgba(239,68,68,.04);
+  text-align: center;
+}
+.w2g-bf-urgency-icon { font-size: 1.4rem; margin-bottom: .35rem; }
+.w2g-bf-urgency-text { font-size: .82rem; font-weight: 700; color: #dc2626; line-height: 1.3; }
+.w2g-bf-urgency-sub  { font-size: .72rem; color: #5a6172; margin-top: .25rem; }
+
+/* ── Celda D: rutas (span 2) ── */
+.w2g-bf-routes {
+  grid-column: span 2;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  justify-content: center;
+}
+.w2g-bf-cell-label {
+  font-size: .65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #5a6172;
+  margin-bottom: .15rem;
+}
+.w2g-bf-routes-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.w2g-bf-chip {
+  font-size: .72rem;
+  font-weight: 600;
+  color: #052A59;
+  background: #F4F6F9;
+  padding: .28rem .6rem;
+  border-radius: 50px;
+  white-space: nowrap;
+}
+.w2g-bf-routes-text { font-size: .82rem; color: #052A59; }
+
+/* ── Celda E: seguro (span 2) ── */
+.w2g-bf-insurance {
+  grid-column: span 2;
+  padding: 1.25rem 1.5rem;
+  background: rgba(34,197,94,.04);
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+.w2g-bf-insurance-icon { font-size: 1.4rem; flex-shrink: 0; }
+.w2g-bf-insurance-text { font-size: .8rem; color: #052A59; line-height: 1.45; }
+.w2g-bf-insurance-text strong { color: #16a34a; }
+.w2g-bf-insurance a {
+  font-size: .75rem;
+  font-weight: 600;
+  color: #F2911B;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* ── Celda F: fechas (span 2) ── */
+.w2g-bf-dates {
+  grid-column: span 2;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.w2g-bf-dates-main { font-size: .95rem; font-weight: 700; color: #052A59; }
+.w2g-bf-dates-sub  { font-size: .75rem; color: #5a6172; margin-top: .15rem; }
+
+/* ── Mobile (≤ 1023px): columna única ── */
+@media (max-width: 1023px) {
+  .w2g-bf-inner { grid-template-columns: 1fr; }
+  .w2g-bf-img { grid-column: span 1; aspect-ratio: 16 / 9; }
+  .w2g-bf-price,
+  .w2g-bf-urgency {
+    grid-column: span 1;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    justify-content: flex-start;
+  }
+  .w2g-bf-urgency { justify-content: flex-start; text-align: left; }
+  .w2g-bf-routes,
+  .w2g-bf-insurance,
+  .w2g-bf-dates { grid-column: span 1; }
+  .w2g-bf-header-sub { display: none; }
+}
