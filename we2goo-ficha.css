@@ -188,3 +188,32 @@
   .w2g-fi-wrap { padding: 0 1rem 3rem; }
   .w2g-fi-fechas-grid { grid-template-columns: 1fr 1fr; }
 }
+
+.w2g-lifecycle-banner {
+  background: #f0f4f8;
+  border-left: 3px solid #4a90d9;
+  padding: 16px 20px;
+  border-radius: 6px;
+  margin: 0 0 24px 0;
+  font-size: 0.9em;
+  color: #444;
+}
+
+.w2g-lifecycle-banner--expired {
+  background: #fdf4ee;
+  border-left-color: #e07b39;
+}
+
+.w2g-lifecycle-cta {
+  display: inline-block;
+  margin-top: 8px;
+  margin-right: 12px;
+  font-weight: 600;
+  color: #4a90d9;
+  text-decoration: underline;
+}
+
+.w2g-lifecycle-cta--secondary {
+  color: #888;
+  font-weight: 400;
+}
